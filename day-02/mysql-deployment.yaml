@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mysql-deployment
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: mysql
@@ -18,6 +18,12 @@ spec:
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: "Aa!@#123"
+        - name: MYSQL_USER
+          value: "doannq_db"
+        - name: MYSQL_PASSWORD
+          value: "Aa!@#123"
+        - name: MYSQL_DATABASE
+          value: "learn_k8s"
         ports:
         - containerPort: 3306
           name: mysql

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laravel
+  template:
+    metadata:
+      labels:
+        app: laravel
+    spec:
+      containers:
+      - name: laravel
+        image: bitnami/laravel
+        env:
+        - name: DB_HOST
+          value: "mysql-service"
+        - name: DB_PORT
+          value: "3306"
+        - name: DB_DATABASE
+          value: "learn_k8s"
+        - name: DB_USERNAME
+          value: "doannq_db"
+        - name: DB_PASSWORD
+          value: "Aa!@#123"
+        ports:
+        - containerPort: 8000
+          name: laravel

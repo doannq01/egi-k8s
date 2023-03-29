@@ -13,11 +13,11 @@ spec:
         app: mysql
     spec:
       containers:
-        - name: mysql
-          image: mysql:latest
-          env:
-            - name: MYSQL_ROOT_PASSWORD
-              value: your_password_here
-          ports:
-            - containerPort: 3306
-              name: mysql
+      - name: mysql
+        image: mysql:latest
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "Aa!@#123"
+        ports:
+        - containerPort: 3306
+          name: mysql

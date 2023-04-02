@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-    $info = DB::table('egitech')->first();
+    $info = DB::table('info')->first();
     return view('welcome', ['info' => $info]);
 });
+
+Route::get('/env', function () {
+    return ['DB_HOST' => env('DB_HOST')];
+});
+

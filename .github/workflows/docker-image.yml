@@ -17,27 +17,31 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: Install Composer
-      run: |
-        ls
-        composer --version
-        composer install
-      working-directory: ${{ env.WORK_DIR }}
-
-    - name: Build Docker Image
-      run: |
-        docker build -t laravel-app:${{ github.sha }} .
-        docker images
-      working-directory: ${{ env.WORK_DIR }}
       
-    - name: Login to Docker Hub
-      uses: docker/login-action@v1
-      with:
-        username: ${{ env.DOCKER_USERNAME }}
-        password: ${{ env.DOCKER_PASSWORD }}
-        
-    - name: Push Docker Image
+    - name: Test
       run: |
-        docker push -t laravel-app:${{ github.sha }} .
-        docker images
+        echo ${{ env.DOCKER_PASSWORD }}
+
+#     - name: Install Composer
+#       run: |
+#         ls
+#         composer --version
+#         composer install
+#       working-directory: ${{ env.WORK_DIR }}
+
+#     - name: Build Docker Image
+#       run: |
+#         docker build -t laravel-app:${{ github.sha }} .
+#         docker images
+#       working-directory: ${{ env.WORK_DIR }}
+      
+#     - name: Login to Docker Hub
+#       uses: docker/login-action@v1
+#       with:
+#         username: ${{ env.DOCKER_USERNAME }}
+#         password: ${{ env.DOCKER_PASSWORD }}
+        
+#     - name: Push Docker Image
+#       run: |
+#         docker push -t laravel-app:${{ github.sha }} .
+#         docker images

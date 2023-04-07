@@ -7,7 +7,7 @@ on:
 env:
   IMAGE_NAME: doannq01/laravel-learn-k8s
   DOCKER_USERNAME: doannq01@gmail.com
-  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  DOCKER_PASSWORD: Doan252589
   WORK_DIR: day-04/laravel-app 
 
 jobs:

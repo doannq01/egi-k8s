@@ -21,8 +21,7 @@ jobs:
     - name: Install Composer
       run: |
         ls
-        php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-        php composer-setup.php --install-dir=bin --filename=composer
+        composer --version
       working-directory: ${{ env.WORK_DIR }}
 
     - name: Build Docker Image

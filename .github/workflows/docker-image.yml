@@ -22,6 +22,7 @@ jobs:
       run: |
         ls
         composer --version
+        composer install
       working-directory: ${{ env.WORK_DIR }}
 
     - name: Build Docker Image

@@ -19,6 +19,10 @@ jobs:
       
     - name: Change directory to day-04
       run: cd day-04/laravel-app
+    
+    - name: Check folder
+      run: ls
+      
 
     - name: Install Composer
       run: |

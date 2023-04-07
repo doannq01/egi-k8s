@@ -7,7 +7,7 @@ on:
 env:
   IMAGE_NAME: doannq01/laravel-learn-k8s
   DOCKER_USERNAME: doannq01
-  DOCKER_PASSWORD: dckr_pat_1KzyJzLoQcb07st45TYs4Pa2PAE
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
   WORK_DIR: day-04/laravel-app 
 
 jobs:
@@ -18,32 +18,26 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       
-    - name: Test
+    - name: Install Composer
+      run: |
+        ls
+        composer --version
+        composer install
+      working-directory: ${{ env.WORK_DIR }}
+
+    - name: Build Docker Image
+      run: |
+        docker build -t laravel-app:${{ github.sha }} .
+        docker images
+      working-directory: ${{ env.WORK_DIR }}
+      
+    - name: Login to Docker Hub
       uses: docker/login-action@v1
       with:
         username: ${{ env.DOCKER_USERNAME }}
         password: ${{ env.DOCKER_PASSWORD }}
-
-#     - name: Install Composer
-#       run: |
-#         ls
-#         composer --version
-#         composer install
-#       working-directory: ${{ env.WORK_DIR }}
-
-#     - name: Build Docker Image
-#       run: |
-#         docker build -t laravel-app:${{ github.sha }} .
-#         docker images
-#       working-directory: ${{ env.WORK_DIR }}
-      
-#     - name: Login to Docker Hub
-#       uses: docker/login-action@v1
-#       with:
-#         username: ${{ env.DOCKER_USERNAME }}
-#         password: ${{ env.DOCKER_PASSWORD }}
         
-#     - name: Push Docker Image
-#       run: |
-#         docker push -t laravel-app:${{ github.sha }} .
-#         docker images
+    - name: Push Docker Image
+      run: |
+        docker push -t laravel-app:${{ github.sha }} .
+        docker images

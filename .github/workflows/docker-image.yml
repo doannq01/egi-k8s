@@ -39,5 +39,4 @@ jobs:
         
     - name: Push Docker Image
       run: |
-        docker push -t laravel-app:${{ github.sha }} .
-        docker images
+        docker push laravel-app:${{ github.sha }}

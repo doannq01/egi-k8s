@@ -27,7 +27,7 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build -t laravel-app:${{ github.sha }} .
+        docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} .
         docker images
       working-directory: ${{ env.WORK_DIR }}
       
@@ -39,4 +39,4 @@ jobs:
         
     - name: Push Docker Image
       run: |
-        docker push laravel-app:${{ github.sha }}
+        docker push ${{ env.IMAGE_NAME }}:${{ github.sha }}

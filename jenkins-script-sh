@@ -1,0 +1,24 @@
+#!/bin/bash
+
+export DOCKER_IMAGE=doannq01/laravel-learn-k8s:$(date +'%d%m%Y%H%M%S')
+export LARAVEL_DIR=./day-04/laravel-app
+export DOCKER_USERNAME="doannq01"
+export DOCKER_PASSWORD="dckr_pat_fFhbuHgAptPEW5SaXsroZCnbJQc"
+
+
+# Install composer
+echo "=============== Install composer ==============="
+composer --version || curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+cd $LARAVEL_DIR && composer install
+
+# Build Docker image
+echo "=============== Build Docker image ==============="
+docker build -t $DOCKER_IMAGE .
+
+# Login to Docker
+echo "=============== Logging in to Docker Hub ==============="
+docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+
+# Push Docker image
+echo "=============== Push Docker image to Docker Hub... ==============="
+docker push $DOCKER_IMAGE

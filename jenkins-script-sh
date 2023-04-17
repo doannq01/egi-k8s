@@ -20,5 +20,5 @@ echo "=============== Logging in to Docker Hub ==============="
 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 # Push Docker image
-echo "=============== Push Docker image to Docker Hub... ==============="
+echo "=============== Push Docker image to Docker Hub.... ==============="
 docker push $DOCKER_IMAGE

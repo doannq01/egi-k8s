@@ -6,11 +6,6 @@ export DOCKER_USERNAME="doannq01"
 export DOCKER_PASSWORD="dckr_pat_fFhbuHgAptPEW5SaXsroZCnbJQc"
 
 
-# Install composer
-echo "=============== Install composer ==============="
-composer --version || curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-cd $LARAVEL_DIR && composer install
-
 # Build Docker image
 echo "=============== Build Docker image ==============="
 docker build -t $DOCKER_IMAGE .

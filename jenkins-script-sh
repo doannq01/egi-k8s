@@ -20,8 +20,7 @@ docker push $DOCKER_IMAGE
 
 # Run docker image
 echo "=============== Run image to Docker Hub.... ==============="
-docker rm laravel-app
-docker stop laravel-app
+docker stop laravel-app && docker rm laravel-app
 
 docker run -d -it --name laravel-app -p 38000:8000 $DOCKER_IMAGE
 

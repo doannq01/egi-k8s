@@ -14,18 +14,7 @@ spec:
     spec:
       containers:
       - name: egi-laravel
-        image: docker.io/doannq01/laravel-learn-k8s:1.0.0
-        env:
-        - name: DB_HOST
-          value: "mysql-service"
-        - name: DB_PORT
-          value: "3306"
-        - name: DB_DATABASE
-          value: "egitech"
-        - name: DB_USERNAME
-          value: "doannq_db"
-        - name: DB_PASSWORD
-          value: "Aa!@#123"
+        image: docker.io/doannq01/laravel-learn-k8s
         ports:
         - containerPort: 8000
           name: egi-laravel

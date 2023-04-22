@@ -17,3 +17,11 @@ docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 # Push Docker image
 echo "=============== Push Docker image to Docker Hub.... ==============="
 docker push $DOCKER_IMAGE
+
+# Run docker image
+echo "=============== Run image to Docker Hub.... ==============="
+docker rm laravel-app
+docker stop laravel-app
+
+docker run -d -it --name laravel-app -p 38000:8000 $DOCKER_IMAGE
+

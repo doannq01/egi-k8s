@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: phpmyadmin-deployment
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: phpmyadmin
@@ -17,7 +17,9 @@ spec:
         image: phpmyadmin:latest
         env:
         - name: PMA_HOST
-          value: "mysql-service"
+          value: "192.168.65.4"
+        - name: PMA_PORT
+          value: "30306"
         - name: PMA_USER
           value: "doannq_db"
         - name: PMA_PASSWORD
@@ -25,3 +27,6 @@ spec:
         ports:
         - containerPort: 80
           name: phpmyadmin
+
+
+# kubectl get nodes -o wide

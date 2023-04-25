@@ -1,0 +1,43 @@
+REDIS_HOST=18.140.55.112
+REDIS_PASSWORD=RBOJ9cCNoGCKhlEBwQLHri1g+atWgn4Xn4HwNUbtzoVxAYxkiYBi7aufl4MILv1nxBqR4L6NNzI0X6cE
+REDIS_PORT=6379
+REDIS_PREFIX=MERTCHANT
+
+AUTH0_DOMAIN=https://dev-s48eauba.jp.auth0.com/
+AUTH0_AUDIENCE=https://local.api.one.ztoasia.com/v1
+
+AUTH0_API_ENDPOINT=https://dev-s48eauba.jp.auth0.com/api/v2/
+
+AUTH0_ONE_CLIENT_ID=L3R53lIpz7kfWR3e2UlXJdKiyu20Q9Q5
+AUTH0_ONE_CLIENT_SECRET=U0PBwGAe-gRfimkVZ_1waraNjDWAUlvslcTFsM7X5z3y9F6m8jGgVxIzJYY0U7lz
+AUTH0_M2M_CLIENT_ID=Hvl2NygQNk87figVRDObyZTtBN2AqGuD 
+AUTH0_M2M_CLIENT_SECRET=jQ74mrLPFsTPajmzLMjcWV59pWnek18YpOoqEkR4MODA0AbDIPjqx3SMWTtYICp1
+
+#RabbitMQ
+FORWARD_RABBITMQ_PORT=5672
+FORWARD_RABBITMQ_DASHBOARD_PORT=15672
+# RABBITMQ_SERVER=amqps://one_master:be98aaa10a57e55c1583c59294af5c81@b-666151d4-3474-49b3-a303-e851eca3c27b.mq.ap-southeast-1.amazonaws.com:5671
+RABBITMQ_SERVER=amqp://admin:admin@localhost:5672
+RABBITMQ_EXCHANGE_NAME=amp.service.one-api.topic
+
+
+SENTRY_DSN=
+
+SENTRY_ENVIRONMENT=dev
+
+# This was inserted by `prisma init`:
+# Environment variables declared in this file are automatically made available to Prisma.
+# See the documentation for more detail: https://pris.ly/d/prisma-schema#using-environment-variables
+
+# Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server and MongoDB (Preview).
+# See the documentation for all the connection string options: https://pris.ly/d/connection-strings
+
+DATABASE_URL="mysql://one_apis:SYY49fuFOG+RTCxex35N3Mtha3AvGXnGewmzk5VVf3+Hqh71@db-zto-fulfil-internal.cmym2uhnzby5.ap-southeast-1.rds.amazonaws.com:3306/one_apis"
+#DATABASE_URL="mysql://one_apis:SYY49fuFOG+RTCxex35N3Mtha3AvGXnGewmzk5VVf3+Hqh71@18.136.21.180:3306/one_apis"
+
+ALLOWED_ORIGINS_CORS="http://localhost:3000,https://app.zto.egitech.vn,https://dev-ui.one.ztoasia.com,https://internal.zto.egitech.vn,https://internal.one.egitech.vn"
+
+API_ENDPOINT=https://api.one.egitech.vn
+ONE_API_ENDPOINT=https://one-api.one.egitech.vn
+
+FILE_EXPIRED=10d

@@ -1,0 +1,109 @@
+{
+    "requestId": "00bf44b3-91b7-408e-ba5b-8bf9049778d9",
+    "data": {
+        "merchantId": "b748490b-70c9-45de-aa20-f09aacc6a53b",
+        "businessName": "NHUNG CAO THI",
+        "arcaNo": "123456789",
+        "ownerContactOffice": "+841234567",
+        "ownerPhoneNumber": "+841234567",
+        "companyPrefix": "DEMO",
+        "merchantType": "Business",
+        "registeredAddress": {
+            "country": "China",
+            "state": "1111",
+            "city": "TPHCM",
+            "postalCode": "123456",
+            "street1": "Quận 12",
+            "street2": null,
+            "building": null,
+            "blockNumber": null,
+            "unitNumber": "123"
+        },
+        "billingAddress": {
+            "country": "Vietnam",
+            "state": "HCM",
+            "city": "HCM",
+            "postalCode": "123123",
+            "street1": "District 1",
+            "street2": "District 1",
+            "building": "District 1",
+            "blockNumber": "District 1",
+            "unitNumber": null
+        },
+        "contactPerson": {
+            "firstName": "Thang",
+            "middleName": "Huynh",
+            "lastName": "Nguyen",
+            "email": "thang-merchant-1@zto.com",
+            "phoneNumber": "+8412345687",
+            "contactOffice": "+84123456789"
+        },
+        "billingPerson": {
+            "firstName": "Thang",
+            "middleName": "Huynh",
+            "lastName": "Nguyen",
+            "email": "thang-merchant-1@zto.com",
+            "phoneNumber": "+8412345687",
+            "contactOffice": "+84123456789"
+        }
+    },
+    "message": "Ok",
+    "code": 200,
+    "status": "OK"
+}
+
+// ---------------------
+
+{
+    "requestId": "b899352c-9ef9-4b42-bf48-e90aa933faf4",
+    "data": {
+      "merchantId": "b748490b-70c9-45de-aa20-f09aacc6a53b",
+      "businessName": "NHUNG CAO",
+      "arcaNo": "829752",
+      "ownerContactOffice": "+846376563",
+      "ownerPhoneNumber": "+846376563",
+      "companyPrefix": "NHUNG",
+      "merchantType": "Business",
+      "registeredAddress": {
+        "country": "Algeria",
+        "state": "Quận 9",
+        "city": "TPHCM",
+        "postalCode": "849853",
+        "street1": "Quận 12",
+        "street2": null,
+        "building": null,
+        "blockNumber": null,
+        "unitNumber": null
+      },
+      "billingAddress": {
+        "country": "Algeria",
+        "state": "Quận 9",
+        "city": "TPHCM",
+        "postalCode": "849853",
+        "street1": "Quận 12",
+        "street2": null,
+        "building": null,
+        "blockNumber": null,
+        "unitNumber": null
+      },
+      "contactPerson": {
+        "firstName": "NHUNG",
+        "middleName": null,
+        "lastName": "CAO",
+        "email": "caonhung14062000@gmail.com",
+        "phoneNumber": "+846376563",
+        "contactOffice": "+846376563"
+      },
+      "billingPerson": {
+        "firstName": "NHUNG",
+        "middleName": null,
+        "lastName": "CAO",
+        "email": "caonhung14062000@gmail.com",
+        "phoneNumber": "+846376563",
+        "contactOffice": "+846376563"
+      }
+    },
+    "message": "Ok",
+    "code": 200,
+    "status": "OK"
+  }

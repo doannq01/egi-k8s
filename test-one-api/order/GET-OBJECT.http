@@ -1,0 +1,19 @@
+@URL={{BASE_URL}}/order/test-upload/shipping/label
+
+### FUll
+GET {{ URL }}
+Content-Type: application/json
+
+{
+}
+
+
+#   data: {
+#     objectId: '9f6fe143-5016-4575-9e88-d73606e09085',
+#     fileInfo: {
+#       name: '2023_04/docs/df1fd00f-916a-4eaf-aa0e-0fcc8b3a2ec2_3c2a5080-1522-485b-b65c-2b625e69fa66',
+#       url: 'https://zto-fulfil-storage-dev.s3-ap-southeast-1.amazonaws.com/2023_04/docs/df1fd00f-916a-4eaf-aa0e-0fcc8b3a2ec2_3c2a5080-1522-485b-b65c-2b625e69fa66?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4JNNAGCC2DPAPLMD%2F20230420%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20230420T044352Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=c787bfd1249ddb1a16966b1624debb79d757a0b2cbcb7d5ac1ff688bc685d25b',
+#       size: 54280,
+#       mimeType: 'application/octet-stream'
+#     }
+#   }

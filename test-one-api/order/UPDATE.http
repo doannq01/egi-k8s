@@ -1,0 +1,83 @@
+@URL={{BASE_URL}}/order/e463f0c0-87a6-40ef-abd8-2c844d687d19
+
+### FUll
+PUT {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+        "recipientInformation": {
+            "recipientEmail": ""
+        }
+
+       
+}
+
+### Validate deliveryDate
+PUT {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "deliveryDate": "2022-08-24",
+    "recipientInformation": {
+        "recipientName": "22323",
+        "recipientNumber": "+84969641671",
+        "recipientEmail": "phonghuynh@example.com",
+        "recipientAddress": "125 Tran Hung Dao",
+        "recipientPostalCode": "290009",
+        "recipientCity": "City",
+        "recipientState": "City",
+        "recipientCountry": "Vietnam"
+    }
+}
+
+### Remove recipientInformation
+PUT {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "deliveryDate": "2023-08-24",
+    "marketplace": "ZTOSG",
+    "deliveryDate": "2023-08-24T00:00:00.000Z",
+    "trackingNumber": "1626",
+    "courier": "ZTOSG",
+    "status": 2000,
+    "statusText": "reserved",
+    "remarks": "987967567",
+    "isDoCollection": true,
+    "isExchange": true
+}
+
+### Only trackingNumber
+PUT {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "courier": "ZTOSG",
+    "recipientInformation": {
+        "recipientAddress": "36 Downtow"
+    }
+}
+
+### Update shipping label
+PUT {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "shippingLabelUrl": "https://cafef1.mediacdn.vn/download/190423/nvl122001-cong-bo-thong-tin-ve-viec-thay-doi-cac-ieu-kien-va-ieu-khoan-cua-trai-phieu-nvlb2123012-0-468078.pdf"
+}
+
+### Update shipping label
+PUT {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "shippingLabelUrl": "https://zto-one-public-assets.s3.amazonaws.com/Images/sg-internal/defaultLogo.png"
+}
+
+

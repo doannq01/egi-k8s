@@ -1,0 +1,10 @@
+@URL={{BASE_URL}}/order/f8f12ecf-fab9-495b-b067-74631d8dead3
+
+### CANCEL
+PUT {{ URL }}/cancel
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+
+}

@@ -1,0 +1,10 @@
+@ID = bcae18c9-db6e-4e13-a868-9a52cbfd57ea
+@URL={{BASE_URL}}/return/{{ID}}
+
+### Validate params
+GET {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+}

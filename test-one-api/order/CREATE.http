@@ -1,0 +1,208 @@
+@URL={{BASE_URL}}/order/bulk-create
+
+### FUll
+POST {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "create": [
+        {
+            "orderNumber": "D-2004-01",
+            "deliveryDate": "2023-04-24",
+            "cashOnDeliveryAmount": 3,
+            "isDoCollection": true,
+            "trackingNumber": "CARCAR152419",
+            "courier": "ZTOSG",
+            "marketplace": "ZTOSG",
+            "remarks": "987967567",
+            "orderLineItems": [
+                {
+                    "sku": "7210574_4",
+                    "lineNumber": "Line-01",
+                    "quantity": 1
+                }
+            ],
+            "recipientInformation": {
+                "recipientEmail": "tom@example.com",
+                "recipientName": "Peter",
+                "recipientNumber": "+84888888888",
+                "recipientCity": "Midview",
+                "recipientState": "Midview",
+                "recipientAddress": "SAAAG",
+                "recipientPostalCode": "223334"
+            }
+        }
+    ]
+}
+
+### Fail => quantity must be int
+POST {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "create": [
+        {
+            "orderNumber": "D-1004-02",
+            "deliveryDate": "2023-04-24",
+            "cashOnDeliveryAmount": 3,
+            "isDoCollection": true,
+            "isExchange": true,
+            "trackingNumber": "Doannq",
+            "shippingLabelUrl": "http://example.com",
+            "courier": "ZTOSG",
+            "marketplace": "ZTOSG",
+            "remarks": 987967567,
+            "orderLineItems": [
+                {
+                    "sku": "100001",
+                    "lineNumber": "Line-01",
+                    "price": 1000,
+                    "quantity": 1
+                }
+            ],
+            "recipientInformation": {
+                "recipientEmail": "phonghuynh@example.com",
+                "recipientName": "Phong Huynh",
+                "recipientNumber": "+84325258903",
+                "recipientAddress": "abc",
+                "recipientCity": null,
+                "recipientState": null,
+                "recipientCountry": "Vietnam",
+                "recipientPostalCode": "290009"
+            }
+        }
+    ]
+}
+
+### Fail => No object recipientInformation
+POST {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "create": [
+        {
+            "orderNumber": "D-1004-02",
+            "deliveryDate": "2023-04-24",
+            "cashOnDeliveryAmount": "3",
+            "isDoCollection": true,
+            "isExchange": true,
+            "trackingNumber": "thong123",
+            "shippingLabelUrl": "http://example.com",
+            "courier": "ZTOSG",
+            "marketplace": "ZTOSG",
+            "remarks": 987967567,
+            "orderLineItems": [
+                {
+                    "sku": "100001",
+                    "lineNumber": "Line-01",
+                    "price": 1000,
+                    "quantity": 1.5
+                }
+            ]
+        }
+    ]
+}
+
+### object Validate recipientName & recipientPostalCode
+POST {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "create": [
+        {
+            "orderNumber": "D-1104-02",
+            "deliveryDate": "2023-04-24",
+            "cashOnDeliveryAmount": 3,
+            "isDoCollection": true,
+            "isExchange": true,
+            "trackingNumber": "thong123",
+            "shippingLabelUrl": "http://example.com",
+            "courier": "ZTOSG",
+            "marketplace": "ZTOSG",
+            "remarks": 987967567,
+            "orderLineItems": [
+                {
+                    "sku": "100003",
+                    "lineNumber": "Line-01",
+                    "price": 1000,
+                    "quantity": 1
+                }
+            ],
+            "recipientInformation": {
+                "recipientEmail": "phonghuynh@example.com",
+                "recipientName": "name",
+                "recipientNumber": "+84987372734",
+                "recipientAddress": "125 Tran Hung Dao",
+                "recipientCity": null,
+                "recipientState": null,
+                "recipientCountry": "Vietnam",
+                "recipientPostalCode": "1232"
+            }
+        }
+    ]
+}
+
+### object Validate có null
+POST {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "create": [
+        {
+            "orderNumber": "NHUNG-1204-4",
+        "remarks": "Thong-1",
+        "cashOnDeliveryAmount": 11111111133333,
+        "isDoCollection": true,
+        "isExchange": true,
+        "trackingNumber": "thong123",
+        "shippingLabelUrl": "http://example.com",
+        "courier": "OTHERS",
+        "marketplace": "ZTOSG",
+        "orderLineItems":
+        [
+            { "sku": "7210557", "lineNumber": "ddddd", "price": 1000, "quantity": 3 }
+         ],
+         "recipientInformation": { "recipientEmail": "phonghuynh@example.com", "recipientName": "Phong Huynh", "recipientNumber": "+8429139049", "recipientAddress": "125 Tran Hung Dao", "recipientCity": null, "recipientState": null, "recipientCountry": "Vietnam", "recipientPostalCode": "290009" } } ] }
+
+
+### Validate date
+POST {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "create": [
+        {
+            "orderNumber": "D-2104-01",
+            "deliveryDate": "2023-04-24",
+            "orderDate": "2023-04-22 13:24",
+            "cashOnDeliveryAmount": 3,
+            "isDoCollection": true,
+            "trackingNumber": "CARCAR152419",
+            "courier": "ZTOSG",
+            "marketplace": "ZTOSG",
+            "remarks": "987967567",
+            "orderLineItems": [
+                {
+                    "sku": "7210574_4",
+                    "lineNumber": "Line-01",
+                    "quantity": 1
+                }
+            ],
+            "recipientInformation": {
+                "recipientEmail": "tom@example.com",
+                "recipientName": "Peter",
+                "recipientNumber": "+84888888888",
+                "recipientCity": "Midview",
+                "recipientState": "Midview",
+                "recipientAddress": "SAAAG",
+                "recipientPostalCode": "223334"
+            }
+        }
+    ]
+}

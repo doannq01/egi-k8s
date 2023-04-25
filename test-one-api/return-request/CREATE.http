@@ -1,0 +1,20 @@
+@URL={{BASE_URL}}/return/bulk-create
+
+### Validate params
+POST {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+    "returnDate": "2023-04-22",
+    "returnInformation":
+    [
+        {
+            "orderNumber": "95929612112695",
+            "quantity": 1,
+            "sku": "7210557",
+            "remarks": "",
+            "trackingNumber": ""
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "orderId": "28e6da0b-871c-426d-b2ff-77f9a59ec21c",
+    "merchantId": "b748490b-70c9-45de-aa20-f09aacc6a53b",
+    "marketplace": "SHOPEE",
+    "deliveryDate": "2023-04-04T00:00:00.000Z",
+    "orderNumber": "KHOI-TEST11",
+    "trackingNumber": null,
+    "courier": "ZTOSG",
+    "status": 9000,
+    "statusText": "cancelled",
+    "remarks": "DOAN test 4",
+    "isDoCollection": false,
+    "isExchange": false,
+    "orderDate": "2023-04-03T18:38:05.634Z",
+    "createdAt": "2023-04-03T18:38:05.634Z",
+    "cashOnDeliveryAmount": "0",
+    "packedDate": null,
+    "lastMileStatus": null,
+    "weightInGram": 24,
+    "orderLineItems": [
+        {
+            "productId": "DEMO-1LE6KN9JL",
+            "sku": "UU012343826",
+            "lineNumber": "KHOI-TEST11-0",
+            "quantity": 3,
+            "price": "1000",
+            "subTotal": "3000"
+        }
+    ],
+    "recipientInformation": {
+        "recipientName": "Phong Huynh",
+        "recipientNumber": "+84345678902",
+        "recipientEmail": null,
+        "recipientAddress": "125 Tran Hung Dao",
+        "recipientPostalCode": "290009",
+        "recipientCity": null,
+        "recipientState": null,
+        "recipientCountry": null
+    }
+}
+
+// ------
+
+{
+    "orderId": "14151041-4889-470e-803c-d9e19bed2468",
+    "merchantId": "b748490b-70c9-45de-aa20-f09aacc6a53b",
+    "marketplace": "SHOPEE",
+    "deliveryDate": "2023-03-23T09:45:10.425Z",
+    "orderNumber": "ZTO-1LFP7PBHM",
+    "trackingNumber": "1221",
+    "courier": "ZTOSG",
+    "status": 9000,
+    "statusText": "shipped",
+    "remarks": "DOAN test 4",
+    "isDoCollection": false,
+    "isExchange": false,
+    "orderDate": "2023-03-26T09:42:54.064Z",
+    "createdAt": "2023-03-26T09:42:54.058Z",
+    "cashOnDeliveryAmount": 0, // => number
+    "packedDate": null,
+    "lastMileStatus": null,
+    "weightInGram": 0,
+    "shippingLabelUrl": "https://example.com",
+    "orderLineItems": [
+        {
+            "productId": "0acc6fc0-5b2d-11ec-bf63-0242ac130002",
+            "sku": "SK222",
+            "lineNumber": "93659233690501",
+            "quantity": 3, 
+            "price": 1000, // => number
+            "subTotal": 3000 // => number
+        }
+    ],
+    "recipientInformation": {
+    "recipientEmail": "phonghuynh@example.com",
+    "recipientName": "Phong Huynh",
+    "recipientNumber": "+8429139049",
+    "recipientAddress": "125 Tran Hung Dao",
+    "recipientCity": null,
+    "recipientState": null,
+    "recipientCountry": "Vietnam",
+    "recipientPostalCode": "290009"
+    }
+}

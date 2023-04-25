@@ -1,0 +1,11 @@
+{
+    "rest-client.environmentVariables": {
+        "$shared": {
+            // "BASE_URL": "http://localhost:3020/v1",
+            "BASE_URL": "https://one-api.one.egitech.vn/v1",
+            // "BASE_URL": "https://uat.one-api.fulfil.ztoasia.com/v1",
+            "TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZTNmZjI0Zi05YzAyLTRmMjYtODQ4YS02NTJiM2MyYWY5ODAiLCJ1c2VybmFtZSI6IkRvYW4gQVBJIiwiY2xpZW50SWQiOiJkZTNmZjI0Zi05YzAyLTRmMjYtODQ4YS02NTJiM2MyYWY5ODAiLCJtZXJjaGFudElkIjoiNDNjYzRlYWQtMWVlZS00YWQ1LWI5ODItNDhlNWQ4MGY1YmU0IiwiY29tcGFueVByZWZpeCI6IkNBUiIsImJ1c2luZXNzTmFtZSI6IkludHJlcGlkIENhcmxzYmVyZyIsImlhdCI6MTY4MjMxMjI4OSwiZXhwIjoxNjgyOTE3MDg5fQ.dKPHeHYhWLYOULj_uBElGDpWD08wimCkmp_qiHs3F9c"
+            // "TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MDdjMzljYS0wNzgzLTQ5YzUtOGQ2NS1lODNhNDU1MTAyMGMiLCJ1c2VybmFtZSI6IkFQSSBURVNUIiwiY2xpZW50SWQiOiI1MDdjMzljYS0wNzgzLTQ5YzUtOGQ2NS1lODNhNDU1MTAyMGMiLCJtZXJjaGFudElkIjoiOGIxYTY2OGItMmViNS00MjI5LTgyN2QtNjRjMGUxZmY3Yzk5IiwiY29tcGFueVByZWZpeCI6IlRYWSIsImJ1c2luZXNzTmFtZSI6IlRpYW5YaW5nWXVuIEludGVybmF0aW9uYWwgVHJhZGUgUHRlIEx0ZCIsImlhdCI6MTY4MTk4MjY5MywiZXhwIjoxNjgyNTg3NDkzfQ.eQnrBW1C6oDFMcY94eTuJiuLcP-iP95xZmZIyyhF9-k"
+        }
+    }
+}

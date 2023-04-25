@@ -1,0 +1,10 @@
+@ID=5089f790-ca95-4430-8c00-f2454cc67db9
+@URL={{BASE_URL}}/return/{{ID}}/cancel
+
+### Validate params
+PUT {{ URL }}
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json
+
+{
+}

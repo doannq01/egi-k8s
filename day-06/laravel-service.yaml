@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: egi-cuong-service
+spec:
+  selector:
+    app: egi-cuong
+  ports:
+    - name: egi-cuong
+      port: 80
+      targetPort: 80
+      nodePort: 30900
+  type: NodePort

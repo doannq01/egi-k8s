@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laravel
+  template:
+    metadata:
+      labels:
+        app: laravel
+    spec:
+      volumes:
+        - name: laravel-data
+          persistentVolumeClaim:
+            claimName: laravel-data
+      containers:
+        - name: laravel
+          image: docker.io/leduccuong01/egiwork-web-v1:latest
+          ports:
+            - containerPort: 80
+              name: laravel
+          volumeMounts:
+            - name: laravel-data
+              mountPath: /var/www/html/

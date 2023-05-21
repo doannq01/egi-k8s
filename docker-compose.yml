@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  egiwork:
+    image: leduccuong01/egiwork-deployment:1.0.0
+    container_name: egiwork
+    restart: always
+    ports:
+      - 8000:8000

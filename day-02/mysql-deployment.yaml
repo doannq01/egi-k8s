@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -13,17 +25,24 @@ spec:
         app: mysql
     spec:
       containers:
-      - name: mysql
-        image: mysql:latest
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: "Aa!@#123"
-        - name: MYSQL_USER
-          value: "doannq_db"
-        - name: MYSQL_PASSWORD
-          value: "Aa!@#123"
-        - name: MYSQL_DATABASE
-          value: "egitech"
-        ports:
-        - containerPort: 3306
-          name: mysql
+        - name: mysql
+          image: mysql:latest
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "Aa!@#123"
+            - name: MYSQL_USER
+              value: "doannq_db"
+            - name: MYSQL_PASSWORD
+              value: "Aa!@#123"
+            - name: MYSQL_DATABASE
+              value: "egitech"
+          ports:
+            - containerPort: 3306
+              name: mysql
+          volumeMounts:
+            - name: mysql-persistent-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: mysql-persistent-storage
+          persistentVolumeClaim:
+            claimName: mysql-pv-claim

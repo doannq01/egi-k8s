@@ -1,9 +1,0 @@
-@URL={{BASE_URL}}/asn/search
-
-### Get List
-GET {{ URL }}
-Authorization: Bearer {{ TOKEN }}
-Content-Type: application/json
-
-{
-}
